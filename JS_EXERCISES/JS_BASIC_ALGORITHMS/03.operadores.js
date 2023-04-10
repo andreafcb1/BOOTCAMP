@@ -11,7 +11,7 @@ console.log(x/y)
 //1.3 Muestra mediante un console el resto de dividir 15 por 9.
 x = 15;
 y = 9;
-console.log(x/y)
+console.log(x%y)
 
 /*1.4 Usa el correcto operador de asignación que resultará en o = 15, 
 teniendo dos variables p = 10 y j = 5.*/
