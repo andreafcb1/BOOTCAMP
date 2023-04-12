@@ -14,3 +14,11 @@ function sumAll(array) {
 }
 
 console.log(sumAll(numbers))
+
+// con REDUCE
+
+const numeros = [1, 2, 3, 5, 45, 37, 58];
+
+let suma = numeros.reduce((acc, number) => acc + number);
+
+console.log(suma);

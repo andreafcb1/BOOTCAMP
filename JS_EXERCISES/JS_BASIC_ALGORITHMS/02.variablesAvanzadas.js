@@ -14,7 +14,9 @@ Muestralos por consola de esta forma:
     let lastName = "Snow";
     let age = 24;
     let quote = "Soy " + firstName + " " + lastName + ", tengo " + age + " años y me gustan los lobos"
+    let templateString = `Soy ${firstName} ${lastName}, tengo ${age} años y me gustan los lobos`;
     console.log(quote)
+    console.log(templateString)
 
 //     1.3 Dado el siguiente javascript, imprime con un console.log la suma del precio de ambos juguetes.
 // const toy1 = {name: 'Buss myYear', price: 19};
