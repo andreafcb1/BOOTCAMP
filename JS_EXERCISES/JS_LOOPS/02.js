@@ -10,10 +10,10 @@ const alumns = [
 		{name: 'Raquel Benito', T1: true, T2: true, T3: true}
 ]
 
-let testPassed = (array) => {
-    array.forEach(student => {
-        (student.T1 && student.T2) || (student.T1 && student.T3) || (student.T2 && student.T3) == true ? student.isApproved = true : student.isApproved = false
+let studentApproved = (array) => {
+    array.forEach(alumn => {
+        (alumn.T1 && alumn.T2) || (alumn.T1 && alumn.T3) || (alumn.T2 && alumn.T3) == true ? alumn.isApproved = true : alumn.isApproved = false
     })
         return array;
 };
-console.log(testPassed(alumns));
+console.log(studentApproved(alumns));
