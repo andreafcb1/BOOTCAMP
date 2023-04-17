@@ -25,7 +25,12 @@ const users1 = [
 	{id:4, name: 'Amanda'}
 ];
 
+const namesArray = users1.map((user)=>({
+    id: user.id,
+    name: user.name.charAt(0) == "A" ? "Anacleto" : user.name
+}))
 
+console.log(namesArray);
 
 // 4.3 Dado el siguiente array, devuelve una lista que contenga los valores 
 // de la propiedad .name y añade al valor de .name el string ' (Visitado)' 
@@ -40,6 +45,6 @@ const cities = [
 
 const visitedCities = cities.map(city => ({
 	name: city.name,
-	visited: city.isVisited === true ? "Visitado" : "No visitado"
+	isVisited: city.isVisited === true ? "Visitado" : city.isVisited
 }));
 console.log(visitedCities);

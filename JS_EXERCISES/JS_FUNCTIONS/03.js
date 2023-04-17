@@ -19,6 +19,6 @@ console.log(sumAll(numbers))
 
 const numeros = [1, 2, 3, 5, 45, 37, 58];
 
-let suma = numeros.reduce((acc, number) => acc + number);
+let suma = numeros.reduce((acc, number) => acc + number, 0);
 
 console.log(suma);

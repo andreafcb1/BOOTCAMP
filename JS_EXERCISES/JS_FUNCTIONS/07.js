@@ -15,13 +15,16 @@ const nameFinder = [
     'Jessica',
     'Marc'
   ];
-  const finderName = (array,word) => {
-    array.forEach((name, index) => {
-        word == name ? console.log(true, index) : console.log(false)
-    })
-  }
-  finderName(nameFinder,"Peggy");
-
-  // ACABAR
-
   
+  const finderName = (array,word) => {
+    let newArray = [];
+    array.forEach((name, index) => {
+        word == name && newArray.push([true, index]) 
+    })
+    if (newArray.length==0){
+        return false
+    } else {
+        return newArray
+    }
+  }
+  console.log(finderName(nameFinder,"Steve"));
