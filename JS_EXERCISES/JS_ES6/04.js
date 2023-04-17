@@ -38,4 +38,8 @@ const cities = [
 	{isVisited:false, name: 'Seul'}
 ];
 
-// ACABAR
+const visitedCities = cities.map(city => ({
+	name: city.name,
+	visited: city.isVisited === true ? "Visitado" : "No visitado"
+}));
+console.log(visitedCities);
