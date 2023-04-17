@@ -12,3 +12,6 @@ const alien = {
 for (let key in alien){
     console.log(key);
 }
+for (let key in alien){
+    console.log(alien[key]);
+}
