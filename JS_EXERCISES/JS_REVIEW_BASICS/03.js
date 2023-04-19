@@ -34,4 +34,15 @@ const users = [
     },
 ]
 
-// sin empezar
+let acc = 0;
+
+for (let user of users){
+    for (sonidos in user.favoritesSounds){
+
+        acc+=user.favoritesSounds
+        
+       console.log(user.favoritesSounds)
+          
+       }};
+
+       // REVISAR Y TERMINAR
