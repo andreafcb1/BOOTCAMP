@@ -1,0 +1,102 @@
+:root {
+    --background-color: #131313;
+    --primary-color: #ffffff;
+    --secondary-color: #BEBEBE;
+    --typography-h1: 30px;
+    --typography-h2: 32.3px;
+    --typography-h3-a: 14px;
+    --typography-p: 13.6px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica", sans-serif;
+}
+
+body {
+    background-color: #131313;
+    color: #ffffff;
+    font-size: var(--typography-p);
+    letter-spacing: 1.5px;
+}
+
+h1 {
+    font-size: var(--typography-h1);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: var(--typography-h2);
+    text-transform: uppercase;
+}
+
+h3,
+a {
+    font-size: var(--typography-h3-a);
+    text-transform: uppercase;
+}
+
+p {
+    color: #BEBEBE;
+}
+
+header {
+    height: 14vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header > nav > ul{
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+}
+
+header a{
+    text-decoration: none;
+    color: #ffffff;   
+    display: flex;
+    flex-direction: column;
+}
+
+/* header a:hover{
+    border-bottom: 2px solid #ffffff;
+} */
+
+header a::after{
+    content: "";
+    background-color: #ffffff;
+    width: 0;
+    height: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+header a:hover::after{
+    width: 100%;
+}
+
+.hero{
+    height: 60vh;
+    overflow: hidden;
+}
+
+.hero img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    animation: banner 6s;
+}
+
+@keyframes banner {
+    0% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
