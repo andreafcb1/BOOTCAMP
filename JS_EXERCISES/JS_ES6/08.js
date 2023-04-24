@@ -13,15 +13,9 @@ const videogames = [
     {name: 'Legend of Zelda: Breath of the wild', genders: ['RPG', 'La cosa más puto bonita que he visto nunca'], score: 10},
 ];
 
-// FALTA ACABAR
-
 const genderGame = videogames.filter(videogame => videogame.genders.includes("RPG"));
-console.log(genderGame);
+//console.log(genderGame);
 
-const {name, genders, score} = videogames;
-
-//const averageScore = genderGame.reduce((acc,genderGame.score) => acc + genderGame.score, 0);
-
-console.log(score);
-
-// FALTA ACABAR
+const sumScores = genderGame.reduce((acc,number) => acc += number.score, 0);
+const averageScore = sumScores/genderGame.length
+console.log(averageScore);
