@@ -3,8 +3,8 @@ const { configCloudinary } = require("./src/middleware/files.middleware");
 const { connect } = require("./src/utils/db");
 const express = require("express");
 const dotenv = require("dotenv");
-
 dotenv.config();
+
 
 //contectar con la DB
 connect();
@@ -12,14 +12,23 @@ const app = express();
 configCloudinary();
 const PORT = process.env.PORT
 
+// configurar las CORS (límites de acceso a nuestra API)
+
+const cors = require('cors');
+app.use(
+  cors({
+    origin: '*',
+    credentials: true,
+  })
+);
+
 // limitaciones en la recepcion y envio de datos en 5mb
 app.use(express.json({ limit: "5mb" }));
 app.use(express.urlencoded({ limit: "5mb", extended: true }));
 
 //ROUTES
 
-const CharacterRoutes = require("./src/api/routes/Character.routes");
-app.use("/api/v1/character/", CharacterRoutes);
+
 
 // Si no se mete ninguna routa
 app.use("*", (req, res, next) => {
